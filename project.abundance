@@ -7,16 +7,18 @@
   "ioValues": [
     {
       "name": "MaterialThickness",
-      "ioValue": 18
+      "ioValue": 18,
+      "currentEquation": "18"
     },
     {
       "name": "PlaceNeeded",
-      "ioValue": 50
+      "ioValue": 50,
+      "currentEquation": "50"
     },
     {
       "name": "DiameterDispenser",
-      "ioValue": 50,
-      "currentEquation": "50"
+      "ioValue": 250,
+      "currentEquation": "250"
     }
   ],
   "topLevel": true,
@@ -69,7 +71,7 @@
         },
         {
           "name": "DiameterDispenser",
-          "ioValue": 50
+          "ioValue": 250
         }
       ],
       "topLevel": false,
@@ -97,7 +99,12 @@
           "x": 0.24558587479935795,
           "y": 0.39951573849878935,
           "uniqueID": "52f425cb-358a-4c9d-80ed-6756656b390c",
-          "ioValues": []
+          "ioValues": [
+            {
+              "name": "diameter",
+              "ioValue": 250
+            }
+          ]
         },
         {
           "atomType": "Extrude",
