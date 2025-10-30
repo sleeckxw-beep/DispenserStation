@@ -15,7 +15,8 @@
     },
     {
       "name": "DiameterDispenser",
-      "ioValue": 10
+      "ioValue": 50,
+      "currentEquation": "50"
     }
   ],
   "topLevel": true,
@@ -68,7 +69,7 @@
         },
         {
           "name": "DiameterDispenser",
-          "ioValue": 10
+          "ioValue": 50
         }
       ],
       "topLevel": false,
@@ -96,12 +97,7 @@
           "x": 0.24558587479935795,
           "y": 0.39951573849878935,
           "uniqueID": "52f425cb-358a-4c9d-80ed-6756656b390c",
-          "ioValues": [
-            {
-              "name": "diameter",
-              "ioValue": 10
-            }
-          ]
+          "ioValues": []
         },
         {
           "atomType": "Extrude",
@@ -109,12 +105,7 @@
           "x": 0.345585874799358,
           "y": 0.39951573849878935,
           "uniqueID": "c63d656d-d7b7-4ca8-9259-bb9b90589eb8",
-          "ioValues": [
-            {
-              "name": "height",
-              "ioValue": 18
-            }
-          ]
+          "ioValues": []
         },
         {
           "atomType": "Input",
@@ -168,10 +159,16 @@
       "ap2Name": "DiameterDispenser",
       "ap1ID": "bc3418b5-ddec-4ab3-b3be-71cbf31fb8a5",
       "ap2ID": "1fb0296b-f68e-4ba5-8464-0bdcfadfc0c7"
+    },
+    {
+      "ap1Name": "geometry or number",
+      "ap2Name": "number or geometry",
+      "ap1ID": "1fb0296b-f68e-4ba5-8464-0bdcfadfc0c7",
+      "ap2ID": "24ceac3b-bc21-4edb-8ffa-edbf03ae90ca"
     }
   ],
   "unitsKey": "MM",
   "fileTypeVersion": 1,
-  "compiledBom": {},
+  "compiledBom": [],
   "filetypeVersion": 1
 }
