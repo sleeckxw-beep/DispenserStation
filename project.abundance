@@ -1,0 +1,15 @@
+{
+    "atomType": "Molecule",
+    "name": "DispenserStation",
+    "x": 0,
+    "y": 0,
+    "uniqueID": "e6cda0f0-ee8a-44da-b1bf-1e721f6cf2b4",
+    "ioValues": [],
+    "topLevel": true,
+    "allAtoms": [],
+    "allConnectors": [],
+    "unitsKey": "MM",
+    "fileTypeVersion": 1,
+    "compiledBom": {},
+    "filetypeVersion": 1
+}
