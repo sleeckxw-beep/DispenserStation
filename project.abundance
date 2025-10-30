@@ -186,23 +186,91 @@
       "compiledBom": []
     },
     {
-      "atomType": "Move",
-      "name": "Move",
-      "x": 0.4735152487961477,
-      "y": 0.38740920096852305,
-      "uniqueID": "75478d76-1889-403d-bb46-bf2124771ded",
+      "atomType": "Molecule",
+      "name": "Collar",
+      "x": 0.3001605136436597,
+      "y": 0.14527845036319612,
+      "uniqueID": "107c4144-3d7b-4279-9289-10673e698426",
       "ioValues": [
         {
-          "name": "xDist",
-          "ioValue": 0
+          "name": "MaterialThickness",
+          "ioValue": 18
         },
         {
-          "name": "yDist",
-          "ioValue": 0
+          "name": "DiameterDispenser",
+          "ioValue": 250
+        }
+      ],
+      "topLevel": false,
+      "allAtoms": [
+        {
+          "atomType": "Output",
+          "name": "Output",
+          "x": 0.98,
+          "y": 0.5,
+          "uniqueID": "198b8999-8183-4291-9b4f-2913892570a2",
+          "ioValues": []
         },
         {
-          "name": "zDist",
-          "ioValue": 50
+          "atomType": "Input",
+          "name": "MaterialThickness",
+          "x": 0.025384615384615384,
+          "y": 0.15384615384615385,
+          "uniqueID": "4b084146-7770-4edb-a262-1e3cd5eda76e",
+          "ioValues": [],
+          "type": "number"
+        },
+        {
+          "atomType": "Input",
+          "name": "DiameterDispenser",
+          "x": 0.025384615384615384,
+          "y": 0.23076923076923078,
+          "uniqueID": "c2bf41d2-6a2b-4847-a1e2-1c28fbfc7a1c",
+          "ioValues": [],
+          "type": "number"
+        }
+      ],
+      "allConnectors": [],
+      "fileTypeVersion": 1,
+      "compiledBom": {}
+    },
+    {
+      "atomType": "Assembly",
+      "name": "Assembly",
+      "x": 0.4686998394863563,
+      "y": 0.31719128329297824,
+      "uniqueID": "aa07192e-c6a6-4270-ac23-f6665203ff96",
+      "ioValues": [
+        {
+          "name": "Shape 1",
+          "ioValue": null
+        },
+        {
+          "name": "Shape 2",
+          "ioValue": {
+            "geometry": "extrude-circle-134-{\"origin\":[0,0,0],\"xDir\":[1,0,0],\"normal\":[0,0,1]}-18",
+            "dimension": "3D",
+            "tags": [],
+            "plane": {
+              "origin": [
+                0,
+                0,
+                0
+              ],
+              "xDir": [
+                1,
+                0,
+                0
+              ],
+              "normal": [
+                0,
+                0,
+                1
+              ]
+            },
+            "color": "#aad7f2",
+            "bom": []
+          }
         }
       ]
     }
@@ -216,9 +284,9 @@
     },
     {
       "ap1Name": "number or geometry",
-      "ap2Name": "zDist",
-      "ap1ID": "978f27a2-4438-4fad-9fdf-b77feeea0704",
-      "ap2ID": "75478d76-1889-403d-bb46-bf2124771ded"
+      "ap2Name": "MaterialThickness",
+      "ap1ID": "5a3c2612-9baf-46d6-ad89-35935608330a",
+      "ap2ID": "107c4144-3d7b-4279-9289-10673e698426"
     },
     {
       "ap1Name": "number or geometry",
@@ -227,15 +295,27 @@
       "ap2ID": "1fb0296b-f68e-4ba5-8464-0bdcfadfc0c7"
     },
     {
+      "ap1Name": "number or geometry",
+      "ap2Name": "DiameterDispenser",
+      "ap1ID": "bc3418b5-ddec-4ab3-b3be-71cbf31fb8a5",
+      "ap2ID": "107c4144-3d7b-4279-9289-10673e698426"
+    },
+    {
       "ap1Name": "geometry or number",
-      "ap2Name": "geometry",
+      "ap2Name": "Shape 2",
       "ap1ID": "1fb0296b-f68e-4ba5-8464-0bdcfadfc0c7",
-      "ap2ID": "75478d76-1889-403d-bb46-bf2124771ded"
+      "ap2ID": "aa07192e-c6a6-4270-ac23-f6665203ff96"
+    },
+    {
+      "ap1Name": "geometry or number",
+      "ap2Name": "Shape 1",
+      "ap1ID": "107c4144-3d7b-4279-9289-10673e698426",
+      "ap2ID": "aa07192e-c6a6-4270-ac23-f6665203ff96"
     },
     {
       "ap1Name": "geometry",
       "ap2Name": "number or geometry",
-      "ap1ID": "75478d76-1889-403d-bb46-bf2124771ded",
+      "ap1ID": "aa07192e-c6a6-4270-ac23-f6665203ff96",
       "ap2ID": "24ceac3b-bc21-4edb-8ffa-edbf03ae90ca"
     }
   ],
