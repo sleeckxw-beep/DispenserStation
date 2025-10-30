@@ -7,13 +7,11 @@
   "ioValues": [
     {
       "name": "MaterialThickness",
-      "ioValue": 18,
-      "currentEquation": "18"
+      "ioValue": 18
     },
     {
       "name": "PlaceNeeded",
-      "ioValue": 50,
-      "currentEquation": "50"
+      "ioValue": 50
     },
     {
       "name": "DiameterDispenser",
@@ -49,12 +47,30 @@
       "type": "number"
     },
     {
+      "atomType": "Input",
+      "name": "DiameterDispenser",
+      "x": 0.025384615384615384,
+      "y": 0.3076923076923077,
+      "uniqueID": "bc3418b5-ddec-4ab3-b3be-71cbf31fb8a5",
+      "ioValues": [],
+      "type": "number"
+    },
+    {
       "atomType": "Molecule",
       "name": "Plate",
       "x": 0.2980203317281969,
       "y": 0.36561743341404357,
       "uniqueID": "1fb0296b-f68e-4ba5-8464-0bdcfadfc0c7",
-      "ioValues": [],
+      "ioValues": [
+        {
+          "name": "MaterialThickness",
+          "ioValue": 18
+        },
+        {
+          "name": "DiameterDispenser",
+          "ioValue": 10
+        }
+      ],
       "topLevel": false,
       "allAtoms": [
         {
@@ -64,23 +80,96 @@
           "y": 0.5,
           "uniqueID": "9f173b28-aa46-4bfc-8332-49402eb49006",
           "ioValues": []
+        },
+        {
+          "atomType": "Input",
+          "name": "MaterialThickness",
+          "x": 0.025384615384615384,
+          "y": 0.7336561743341404,
+          "uniqueID": "7413c452-ea35-4530-9ea3-7470641f5235",
+          "ioValues": [],
+          "type": "number"
+        },
+        {
+          "atomType": "Circle",
+          "name": "Circle",
+          "x": 0.24558587479935795,
+          "y": 0.39951573849878935,
+          "uniqueID": "52f425cb-358a-4c9d-80ed-6756656b390c",
+          "ioValues": [
+            {
+              "name": "diameter",
+              "ioValue": 10
+            }
+          ]
+        },
+        {
+          "atomType": "Extrude",
+          "name": "Extrude",
+          "x": 0.345585874799358,
+          "y": 0.39951573849878935,
+          "uniqueID": "c63d656d-d7b7-4ca8-9259-bb9b90589eb8",
+          "ioValues": [
+            {
+              "name": "height",
+              "ioValue": 18
+            }
+          ]
+        },
+        {
+          "atomType": "Input",
+          "name": "DiameterDispenser",
+          "x": 0.025384615384615384,
+          "y": 0.42372881355932207,
+          "uniqueID": "c934adcb-74a5-4f48-a974-810e3c409411",
+          "ioValues": [],
+          "type": "number"
         }
       ],
-      "allConnectors": [],
+      "allConnectors": [
+        {
+          "ap1Name": "number or geometry",
+          "ap2Name": "height",
+          "ap1ID": "7413c452-ea35-4530-9ea3-7470641f5235",
+          "ap2ID": "c63d656d-d7b7-4ca8-9259-bb9b90589eb8"
+        },
+        {
+          "ap1Name": "geometry",
+          "ap2Name": "geometry",
+          "ap1ID": "52f425cb-358a-4c9d-80ed-6756656b390c",
+          "ap2ID": "c63d656d-d7b7-4ca8-9259-bb9b90589eb8"
+        },
+        {
+          "ap1Name": "geometry",
+          "ap2Name": "number or geometry",
+          "ap1ID": "c63d656d-d7b7-4ca8-9259-bb9b90589eb8",
+          "ap2ID": "9f173b28-aa46-4bfc-8332-49402eb49006"
+        },
+        {
+          "ap1Name": "number or geometry",
+          "ap2Name": "diameter",
+          "ap1ID": "c934adcb-74a5-4f48-a974-810e3c409411",
+          "ap2ID": "52f425cb-358a-4c9d-80ed-6756656b390c"
+        }
+      ],
       "fileTypeVersion": 1,
-      "compiledBom": {}
-    },
-    {
-      "atomType": "Input",
-      "name": "DiameterDispenser",
-      "x": 0.025384615384615384,
-      "y": 0.3076923076923077,
-      "uniqueID": "bc3418b5-ddec-4ab3-b3be-71cbf31fb8a5",
-      "ioValues": [],
-      "type": "number"
+      "compiledBom": []
     }
   ],
-  "allConnectors": [],
+  "allConnectors": [
+    {
+      "ap1Name": "number or geometry",
+      "ap2Name": "MaterialThickness",
+      "ap1ID": "5a3c2612-9baf-46d6-ad89-35935608330a",
+      "ap2ID": "1fb0296b-f68e-4ba5-8464-0bdcfadfc0c7"
+    },
+    {
+      "ap1Name": "number or geometry",
+      "ap2Name": "DiameterDispenser",
+      "ap1ID": "bc3418b5-ddec-4ab3-b3be-71cbf31fb8a5",
+      "ap2ID": "1fb0296b-f68e-4ba5-8464-0bdcfadfc0c7"
+    }
+  ],
   "unitsKey": "MM",
   "fileTypeVersion": 1,
   "compiledBom": {},
