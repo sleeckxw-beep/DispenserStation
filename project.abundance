@@ -76,8 +76,8 @@
         {
           "atomType": "Output",
           "name": "Output",
-          "x": 0.98,
-          "y": 0.5,
+          "x": 0.9716425896201176,
+          "y": 0.4963680387409201,
           "uniqueID": "9f173b28-aa46-4bfc-8332-49402eb49006",
           "ioValues": []
         },
@@ -99,7 +99,7 @@
           "ioValues": [
             {
               "name": "diameter",
-              "ioValue": 268
+              "ioValue": 286
             }
           ]
         },
@@ -127,7 +127,7 @@
         },
         {
           "atomType": "Equation",
-          "name": "x + y",
+          "name": "(2*x) + y",
           "x": 0.1369716425896201,
           "y": 0.6125907990314771,
           "uniqueID": "03dc2088-d609-4806-856a-e135e3a65ac2",
@@ -141,7 +141,7 @@
               "ioValue": 250
             }
           ],
-          "currentEquation": "x + y"
+          "currentEquation": "(2*x) + y"
         }
       ],
       "allConnectors": [
@@ -238,7 +238,7 @@
           "ioValues": [
             {
               "name": "diameter",
-              "ioValue": 268
+              "ioValue": 286
             }
           ]
         },
@@ -257,7 +257,7 @@
         },
         {
           "atomType": "Equation",
-          "name": "x + y",
+          "name": "(x*2) + y",
           "x": 0.18697164258962012,
           "y": 0.562590799031477,
           "uniqueID": "7226682b-d7cf-436a-9158-7749ac61c2fb",
@@ -271,7 +271,7 @@
               "ioValue": 250
             }
           ],
-          "currentEquation": "x + y"
+          "currentEquation": "(x*2) + y"
         },
         {
           "atomType": "Circle",
@@ -362,13 +362,34 @@
             },
             {
               "name": "yDist",
-              "ioValue": 0
+              "ioValue": 125
             },
             {
               "name": "zDist",
               "ioValue": 0
             }
           ]
+        },
+        {
+          "atomType": "Extrude",
+          "name": "Extrude",
+          "x": 0.4403424291064741,
+          "y": 0.8934624697336562,
+          "uniqueID": "b8fc8549-d8df-44ee-a96d-6568a1dc8074",
+          "ioValues": [
+            {
+              "name": "height",
+              "ioValue": 18
+            }
+          ]
+        },
+        {
+          "atomType": "Difference",
+          "name": "Difference",
+          "x": 0.7597645799892991,
+          "y": 0.6150121065375302,
+          "uniqueID": "dc3291e7-b844-48a7-b38f-890efeea2023",
+          "ioValues": []
         }
       ],
       "allConnectors": [
@@ -389,6 +410,12 @@
           "ap2Name": "height",
           "ap1ID": "4b084146-7770-4edb-a262-1e3cd5eda76e",
           "ap2ID": "4d980166-d4d6-4b70-9e9e-f83ca3686609"
+        },
+        {
+          "ap1Name": "number or geometry",
+          "ap2Name": "height",
+          "ap1ID": "4b084146-7770-4edb-a262-1e3cd5eda76e",
+          "ap2ID": "b8fc8549-d8df-44ee-a96d-6568a1dc8074"
         },
         {
           "ap1Name": "number or geometry",
@@ -446,9 +473,9 @@
         },
         {
           "ap1Name": "geometry",
-          "ap2Name": "number or geometry",
+          "ap2Name": "geometry1",
           "ap1ID": "c54983f9-7347-4600-b51b-cad63569c2b5",
-          "ap2ID": "198b8999-8183-4291-9b4f-2913892570a2"
+          "ap2ID": "dc3291e7-b844-48a7-b38f-890efeea2023"
         },
         {
           "ap1Name": "geometry",
@@ -467,6 +494,30 @@
           "ap2Name": "y length",
           "ap1ID": "94fc305a-fd64-4c6a-9dca-219dc875aa34",
           "ap2ID": "8f7d521e-b620-4e91-8b44-739cc34fbc14"
+        },
+        {
+          "ap1Name": "result",
+          "ap2Name": "yDist",
+          "ap1ID": "94fc305a-fd64-4c6a-9dca-219dc875aa34",
+          "ap2ID": "4a2a2350-141f-4460-be83-f2179f42b334"
+        },
+        {
+          "ap1Name": "geometry",
+          "ap2Name": "geometry",
+          "ap1ID": "4a2a2350-141f-4460-be83-f2179f42b334",
+          "ap2ID": "b8fc8549-d8df-44ee-a96d-6568a1dc8074"
+        },
+        {
+          "ap1Name": "geometry",
+          "ap2Name": "geometry2",
+          "ap1ID": "b8fc8549-d8df-44ee-a96d-6568a1dc8074",
+          "ap2ID": "dc3291e7-b844-48a7-b38f-890efeea2023"
+        },
+        {
+          "ap1Name": "geometry",
+          "ap2Name": "number or geometry",
+          "ap1ID": "dc3291e7-b844-48a7-b38f-890efeea2023",
+          "ap2ID": "198b8999-8183-4291-9b4f-2913892570a2"
         }
       ],
       "fileTypeVersion": 1,
@@ -475,65 +526,16 @@
     {
       "atomType": "Assembly",
       "name": "Assembly",
-      "x": 0.4686998394863563,
-      "y": 0.31719128329297824,
+      "x": 0.5864098448368111,
+      "y": 0.38256658595641646,
       "uniqueID": "aa07192e-c6a6-4270-ac23-f6665203ff96",
       "ioValues": [
         {
-          "name": "Shape 1",
+          "name": "Shape 2",
           "ioValue": {
-            "geometry": [
-              {
-                "geometry": "cut-extrude-circle-125-{\"origin\":[0,0,0],\"xDir\":[1,0,0],\"normal\":[0,0,1]}-18-extrude-circle-134-{\"origin\":[0,0,0],\"xDir\":[1,0,0],\"normal\":[0,0,1]}-18",
-                "dimension": "3D",
-                "tags": [
-                  "keepout"
-                ],
-                "plane": {
-                  "origin": [
-                    0,
-                    0,
-                    0
-                  ],
-                  "xDir": [
-                    1,
-                    0,
-                    0
-                  ],
-                  "normal": [
-                    0,
-                    0,
-                    1
-                  ]
-                },
-                "color": "#D9544D",
-                "bom": []
-              },
-              {
-                "geometry": "extrude-circle-134-{\"origin\":[0,0,0],\"xDir\":[1,0,0],\"normal\":[0,0,1]}-18",
-                "dimension": "3D",
-                "tags": [],
-                "plane": {
-                  "origin": [
-                    0,
-                    0,
-                    0
-                  ],
-                  "xDir": [
-                    1,
-                    0,
-                    0
-                  ],
-                  "normal": [
-                    0,
-                    0,
-                    1
-                  ]
-                },
-                "color": "#aad7f2",
-                "bom": []
-              }
-            ],
+            "geometry": "extrude-circle-143-{\"origin\":[0,0,0],\"xDir\":[1,0,0],\"normal\":[0,0,1]}-18",
+            "dimension": "3D",
+            "tags": [],
             "plane": {
               "origin": [
                 0,
@@ -551,16 +553,14 @@
                 1
               ]
             },
-            "tags": [],
             "color": "#aad7f2",
-            "bom": [],
-            "dimension": "3D"
+            "bom": []
           }
         },
         {
-          "name": "Shape 2",
+          "name": "Shape 3",
           "ioValue": {
-            "geometry": "extrude-circle-134-{\"origin\":[0,0,0],\"xDir\":[1,0,0],\"normal\":[0,0,1]}-18",
+            "geometry": "move-cut-cut-extrude-circle-143-{\"origin\":[0,0,0],\"xDir\":[1,0,0],\"normal\":[0,0,1]}-18-extrude-circle-125-{\"origin\":[0,0,0],\"xDir\":[1,0,0],\"normal\":[0,0,1]}-18-extrude-move-rectangle-125-125-0-125-0-{\"origin\":[0,0,0],\"xDir\":[1,0,0],\"normal\":[0,0,1]}-18-0-0-18",
             "dimension": "3D",
             "tags": [],
             "plane": {
@@ -585,6 +585,27 @@
           }
         }
       ]
+    },
+    {
+      "atomType": "Move",
+      "name": "Move",
+      "x": 0.4478330658105939,
+      "y": 0.2566585956416465,
+      "uniqueID": "44557f39-de23-4523-ad37-030df809b6ea",
+      "ioValues": [
+        {
+          "name": "xDist",
+          "ioValue": 0
+        },
+        {
+          "name": "yDist",
+          "ioValue": 0
+        },
+        {
+          "name": "zDist",
+          "ioValue": 18
+        }
+      ]
     }
   ],
   "allConnectors": [
@@ -599,6 +620,12 @@
       "ap2Name": "MaterialThickness",
       "ap1ID": "5a3c2612-9baf-46d6-ad89-35935608330a",
       "ap2ID": "107c4144-3d7b-4279-9289-10673e698426"
+    },
+    {
+      "ap1Name": "number or geometry",
+      "ap2Name": "zDist",
+      "ap1ID": "5a3c2612-9baf-46d6-ad89-35935608330a",
+      "ap2ID": "44557f39-de23-4523-ad37-030df809b6ea"
     },
     {
       "ap1Name": "number or geometry",
@@ -620,15 +647,21 @@
     },
     {
       "ap1Name": "geometry or number",
-      "ap2Name": "Shape 1",
+      "ap2Name": "geometry",
       "ap1ID": "107c4144-3d7b-4279-9289-10673e698426",
-      "ap2ID": "aa07192e-c6a6-4270-ac23-f6665203ff96"
+      "ap2ID": "44557f39-de23-4523-ad37-030df809b6ea"
     },
     {
       "ap1Name": "geometry",
       "ap2Name": "number or geometry",
       "ap1ID": "aa07192e-c6a6-4270-ac23-f6665203ff96",
       "ap2ID": "24ceac3b-bc21-4edb-8ffa-edbf03ae90ca"
+    },
+    {
+      "ap1Name": "geometry",
+      "ap2Name": "Shape 3",
+      "ap1ID": "44557f39-de23-4523-ad37-030df809b6ea",
+      "ap2ID": "aa07192e-c6a6-4270-ac23-f6665203ff96"
     }
   ],
   "unitsKey": "MM",
