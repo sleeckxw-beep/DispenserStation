@@ -7,18 +7,15 @@
   "ioValues": [
     {
       "name": "MaterialThickness",
-      "ioValue": 18,
-      "currentEquation": "18"
+      "ioValue": 18
     },
     {
       "name": "PlaceNeeded",
-      "ioValue": 50,
-      "currentEquation": "50"
+      "ioValue": 50
     },
     {
       "name": "DiameterDispenser",
-      "ioValue": 250,
-      "currentEquation": "250"
+      "ioValue": 250
     }
   ],
   "topLevel": true,
@@ -44,7 +41,7 @@
       "atomType": "Input",
       "name": "PlaceNeeded",
       "x": 0.025384615384615384,
-      "y": 0.23076923076923078,
+      "y": 0.7723970944309927,
       "uniqueID": "978f27a2-4438-4fad-9fdf-b77feeea0704",
       "ioValues": [],
       "type": "number"
@@ -53,7 +50,7 @@
       "atomType": "Input",
       "name": "DiameterDispenser",
       "x": 0.025384615384615384,
-      "y": 0.3076923076923077,
+      "y": 0.48426150121065376,
       "uniqueID": "bc3418b5-ddec-4ab3-b3be-71cbf31fb8a5",
       "ioValues": [],
       "type": "number"
@@ -88,7 +85,7 @@
           "atomType": "Input",
           "name": "MaterialThickness",
           "x": 0.025384615384615384,
-          "y": 0.7336561743341404,
+          "y": 0.15384615384615385,
           "uniqueID": "7413c452-ea35-4530-9ea3-7470641f5235",
           "ioValues": [],
           "type": "number"
@@ -102,7 +99,7 @@
           "ioValues": [
             {
               "name": "diameter",
-              "ioValue": 250
+              "ioValue": 268
             }
           ]
         },
@@ -112,16 +109,39 @@
           "x": 0.345585874799358,
           "y": 0.39951573849878935,
           "uniqueID": "c63d656d-d7b7-4ca8-9259-bb9b90589eb8",
-          "ioValues": []
+          "ioValues": [
+            {
+              "name": "height",
+              "ioValue": 18
+            }
+          ]
         },
         {
           "atomType": "Input",
           "name": "DiameterDispenser",
           "x": 0.025384615384615384,
-          "y": 0.42372881355932207,
+          "y": 0.23076923076923078,
           "uniqueID": "c934adcb-74a5-4f48-a974-810e3c409411",
           "ioValues": [],
           "type": "number"
+        },
+        {
+          "atomType": "Equation",
+          "name": "x + y",
+          "x": 0.1369716425896201,
+          "y": 0.6125907990314771,
+          "uniqueID": "03dc2088-d609-4806-856a-e135e3a65ac2",
+          "ioValues": [
+            {
+              "name": "x",
+              "ioValue": 18
+            },
+            {
+              "name": "y",
+              "ioValue": 250
+            }
+          ],
+          "currentEquation": "x + y"
         }
       ],
       "allConnectors": [
@@ -130,6 +150,12 @@
           "ap2Name": "height",
           "ap1ID": "7413c452-ea35-4530-9ea3-7470641f5235",
           "ap2ID": "c63d656d-d7b7-4ca8-9259-bb9b90589eb8"
+        },
+        {
+          "ap1Name": "number or geometry",
+          "ap2Name": "x",
+          "ap1ID": "7413c452-ea35-4530-9ea3-7470641f5235",
+          "ap2ID": "03dc2088-d609-4806-856a-e135e3a65ac2"
         },
         {
           "ap1Name": "geometry",
@@ -145,13 +171,40 @@
         },
         {
           "ap1Name": "number or geometry",
-          "ap2Name": "diameter",
+          "ap2Name": "y",
           "ap1ID": "c934adcb-74a5-4f48-a974-810e3c409411",
+          "ap2ID": "03dc2088-d609-4806-856a-e135e3a65ac2"
+        },
+        {
+          "ap1Name": "result",
+          "ap2Name": "diameter",
+          "ap1ID": "03dc2088-d609-4806-856a-e135e3a65ac2",
           "ap2ID": "52f425cb-358a-4c9d-80ed-6756656b390c"
         }
       ],
       "fileTypeVersion": 1,
       "compiledBom": []
+    },
+    {
+      "atomType": "Move",
+      "name": "Move",
+      "x": 0.4735152487961477,
+      "y": 0.38740920096852305,
+      "uniqueID": "75478d76-1889-403d-bb46-bf2124771ded",
+      "ioValues": [
+        {
+          "name": "xDist",
+          "ioValue": 0
+        },
+        {
+          "name": "yDist",
+          "ioValue": 0
+        },
+        {
+          "name": "zDist",
+          "ioValue": 50
+        }
+      ]
     }
   ],
   "allConnectors": [
@@ -163,14 +216,26 @@
     },
     {
       "ap1Name": "number or geometry",
+      "ap2Name": "zDist",
+      "ap1ID": "978f27a2-4438-4fad-9fdf-b77feeea0704",
+      "ap2ID": "75478d76-1889-403d-bb46-bf2124771ded"
+    },
+    {
+      "ap1Name": "number or geometry",
       "ap2Name": "DiameterDispenser",
       "ap1ID": "bc3418b5-ddec-4ab3-b3be-71cbf31fb8a5",
       "ap2ID": "1fb0296b-f68e-4ba5-8464-0bdcfadfc0c7"
     },
     {
       "ap1Name": "geometry or number",
-      "ap2Name": "number or geometry",
+      "ap2Name": "geometry",
       "ap1ID": "1fb0296b-f68e-4ba5-8464-0bdcfadfc0c7",
+      "ap2ID": "75478d76-1889-403d-bb46-bf2124771ded"
+    },
+    {
+      "ap1Name": "geometry",
+      "ap2Name": "number or geometry",
+      "ap1ID": "75478d76-1889-403d-bb46-bf2124771ded",
       "ap2ID": "24ceac3b-bc21-4edb-8ffa-edbf03ae90ca"
     }
   ],
