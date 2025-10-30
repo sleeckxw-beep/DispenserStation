@@ -1,15 +1,88 @@
 {
-    "atomType": "Molecule",
-    "name": "DispenserStation",
-    "x": 0,
-    "y": 0,
-    "uniqueID": "e6cda0f0-ee8a-44da-b1bf-1e721f6cf2b4",
-    "ioValues": [],
-    "topLevel": true,
-    "allAtoms": [],
-    "allConnectors": [],
-    "unitsKey": "MM",
-    "fileTypeVersion": 1,
-    "compiledBom": {},
-    "filetypeVersion": 1
+  "atomType": "Molecule",
+  "name": "DispenserStation",
+  "x": 0,
+  "y": 0,
+  "uniqueID": "e6cda0f0-ee8a-44da-b1bf-1e721f6cf2b4",
+  "ioValues": [
+    {
+      "name": "MaterialThickness",
+      "ioValue": 18,
+      "currentEquation": "18"
+    },
+    {
+      "name": "PlaceNeeded",
+      "ioValue": 50,
+      "currentEquation": "50"
+    },
+    {
+      "name": "DiameterDispenser",
+      "ioValue": 10
+    }
+  ],
+  "topLevel": true,
+  "allAtoms": [
+    {
+      "atomType": "Output",
+      "name": "Output",
+      "x": 0.98,
+      "y": 0.5,
+      "uniqueID": "24ceac3b-bc21-4edb-8ffa-edbf03ae90ca",
+      "ioValues": []
+    },
+    {
+      "atomType": "Input",
+      "name": "MaterialThickness",
+      "x": 0.025384615384615384,
+      "y": 0.15384615384615385,
+      "uniqueID": "5a3c2612-9baf-46d6-ad89-35935608330a",
+      "ioValues": [],
+      "type": "number"
+    },
+    {
+      "atomType": "Input",
+      "name": "PlaceNeeded",
+      "x": 0.025384615384615384,
+      "y": 0.23076923076923078,
+      "uniqueID": "978f27a2-4438-4fad-9fdf-b77feeea0704",
+      "ioValues": [],
+      "type": "number"
+    },
+    {
+      "atomType": "Molecule",
+      "name": "Plate",
+      "x": 0.2980203317281969,
+      "y": 0.36561743341404357,
+      "uniqueID": "1fb0296b-f68e-4ba5-8464-0bdcfadfc0c7",
+      "ioValues": [],
+      "topLevel": false,
+      "allAtoms": [
+        {
+          "atomType": "Output",
+          "name": "Output",
+          "x": 0.98,
+          "y": 0.5,
+          "uniqueID": "9f173b28-aa46-4bfc-8332-49402eb49006",
+          "ioValues": []
+        }
+      ],
+      "allConnectors": [],
+      "fileTypeVersion": 1,
+      "compiledBom": {}
+    },
+    {
+      "atomType": "Input",
+      "name": "DiameterDispenser",
+      "x": 0.025384615384615384,
+      "y": 0.3076923076923077,
+      "uniqueID": "bc3418b5-ddec-4ab3-b3be-71cbf31fb8a5",
+      "ioValues": [],
+      "type": "number"
+    }
+  ],
+  "allConnectors": [],
+  "unitsKey": "MM",
+  "fileTypeVersion": 1,
+  "compiledBom": {},
+  "filetypeVersion": 1
 }
